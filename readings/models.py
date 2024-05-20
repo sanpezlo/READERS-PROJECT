@@ -16,3 +16,6 @@ class Book(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     deleted_at = models.DateTimeField(null=True, blank=True)
     status = models.BooleanField(default=True)
+
+    def __str__(self) -> str:
+        return self.title
